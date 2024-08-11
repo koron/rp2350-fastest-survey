@@ -2,7 +2,7 @@
 
 set -eu
 
-DOCKER_IMAGE="asciidoctor/docker-asciidoctor:1.60.0"
+DOCKER_IMAGE="asciidoctor/docker-asciidoctor:1.75.0"
 
 dir="$(pwd)"
 case $(uname -s) in
