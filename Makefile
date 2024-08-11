@@ -1,5 +1,8 @@
 NAME=$(shell basename $$PWD)
 
+.PHONY: default
+default: docker-html
+
 .PHONY: html
 html:
 	asciidoctor -D build/html book.adoc
