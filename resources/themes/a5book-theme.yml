@@ -1,0 +1,114 @@
+extends: default-with-font-fallbacks
+
+font:
+  catalog:
+    merge: true
+    Noto Sans JP:
+      normal:       NotoSansJP-Regular.ttf
+      bold:         NotoSansJP-Bold.ttf
+      italic:       NotoSansJP-Regular.ttf
+      bold_italic:  NotoSansJP-Bold.ttf
+    Noto Serif JP:
+      normal:       NotoSerifJP-Regular.ttf
+      bold:         NotoSerifJP-Bold.ttf
+      italic:       NotoSerifJP-Regular.ttf
+      bold_italic:  NotoSerifJP-Bold.ttf
+    Noto Sans Mono:
+      normal:       NotoSansMono-Regular.ttf
+      bold:         NotoSansMono-Bold.ttf
+      italic:       NotoSansMono-Regular.ttf
+      bold_italic:  NotoSansMono-Bold.ttf
+    Noto Sans Math: NotoSansMath-Regular.ttf
+    UDEV Gothic JPDOC:
+      normal:       UDEVGothicJPDOC-Regular.ttf
+      bold:         UDEVGothicJPDOC-Bold.ttf
+      italic:       UDEVGothicJPDOC-Italic.ttf
+      bold_italic:  UDEVGothicJPDOC-BoldItalic.ttf
+  fallbacks:
+    - Noto Sans Math
+    - Noto Emoji
+    - Noto Serif
+
+font_family_sans:   Noto Sans JP
+font_family_serif:  Noto Serif JP
+font_family_code:   UDEV Gothic JPDOC
+font_family_link:   UDEV Gothic JPDOC
+
+page:
+  size: A5
+  margin: [0.5in, 0.4in, 0.5in, 0.4in]
+  #margin_inner: 0.5in
+  #margin_outer: 0.3in
+
+base:
+  text-align: left
+  font_family: $font_family_serif
+  font_kerning: normal
+
+  border:
+    color: 000000
+    width: 1.0
+
+codespan:
+  font_color: 333333
+  font_family: $font_family_code
+
+code:
+  font_family: $font_family_code
+  line_height: 1.05
+
+description_list:
+  term_font_family: $font_family_sans
+
+link:
+  font_color: 333333
+  font_family: $font_family_link
+  font_size: 9.0
+
+quote:
+  font_family: $font_family_sans
+
+thematic_break:
+  border_color: $base_border_color
+  border_width: 1.25
+  padding: [ $vertical_rhythm * 0.5, 0 ]
+
+title_page:
+  font_family: $font_family_sans
+  title:
+    font_color: $base_font_color
+  subtitle:
+    font_color: $base_font_color
+  authors:
+    font_color: $base_font_color
+    font_family: $font_family_serif
+  revision:
+    font_color: $base_font_color
+    font_family: $font_family_serif
+
+heading:
+  font_family: $font_family_sans
+  font_style: normal
+
+  h2:
+    margin_bottom: -$vertical_rhythm * 0.25
+
+header:
+  font_family: $font_family_sans
+  font_color: $base_font_color
+  border_color: $base_border_color
+  border_width: $base_border_width
+  height: $base_line_height_length * 2.5
+  padding: [$base_line_height_length * 1.5, 0, 0, 0]
+  recto:
+    right:
+      content: '{document-title}'
+  verso:
+    left:
+      content: '{document-title}'
+
+footer:
+  font_family: $font_family_sans
+  font_color: $base_font_color
+  border_color: $base_border_color
+  border_width: $base_border_width

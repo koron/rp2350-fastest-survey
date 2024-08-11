@@ -1,0 +1,21 @@
+= RP2350最速調査
+村岡太郎 (KoRoN, @kaoriya)
+2024/08/12 発行
+:source-highlighter: rouge
+//:toc: right
+//:figure-caption: 図
+// for asciidoctor-pdf
+:scripts: cjk
+:compress:
+:title-page:
+//:doctype: book
+//:media: prepress
+
+<<<
+## はじめに
+'''
+
+## おわりに
+'''
+
+2024/08/12 村岡太郎 (a.k.a. KoRoN, or @kaoriya)

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -eu
+
+# TODO: check pdfcpu availability, and guard if absent.
+if !(hash pdfcpu 2> /dev/null) ; then
+  echo "pdfcpu not found. please install it with:"
+  echo ""
+  echo "    $ go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest"
+  exit 1
+fi
+
+pdf=$1
+
+pdfcpu pagelayout set "$pdf" TwoPageRight
+pdfcpu pages insert -pages 1,l -mode after "$pdf"
